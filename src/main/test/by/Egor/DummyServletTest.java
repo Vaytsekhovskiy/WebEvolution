@@ -1,3 +1,5 @@
+package by.Egor;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.junit.Before;
@@ -11,13 +13,13 @@ import java.io.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class DummyHttpServletTest {
+public class DummyServletTest {
 
     @InjectMocks
-    private DummyHttpServlet servlet;
+    private DummyServlet servlet;
 
     @Mock
-    private DummyHttpManager manager;
+    private DummyManager manager;
 
     @Mock
     private HttpServletRequest request;

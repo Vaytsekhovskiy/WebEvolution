@@ -1,18 +1,27 @@
+package by.Egor;
+
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 
-public class DummyHttpServlet extends HttpServlet {
-    private DummyHttpManager manager;
+public class DummyServlet extends HttpServlet {
+    private DummyManager manager;
 
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
-        this.manager = new DummyHttpManager();
+        ApplicationContext applicationContext = null;
+        try {
+            applicationContext = new ApplicationContext();
+        } catch (InvocationTargetException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+        this.manager = applicationContext.getInstance(DummyManager.class);
     }
 
     @Override

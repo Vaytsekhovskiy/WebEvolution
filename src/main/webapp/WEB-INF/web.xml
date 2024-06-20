@@ -10,7 +10,7 @@
   <display-name>Servlet Request Info</display-name>
   <servlet>
     <servlet-name>support</servlet-name>
-    <servlet-class>DummyHttpServlet</servlet-class>
+    <servlet-class>by.Egor.DummyServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
