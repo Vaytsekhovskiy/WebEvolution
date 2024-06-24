@@ -1,2 +1,10 @@
-Main.class
-DummyHttpServlet.class
+by\Egor\configuration\DummyConfiguration.class
+by\Egor\DummyServiceImpl.class
+by\Egor\configuration\Configuration.class
+by\Egor\DummyServlet.class
+by\Egor\ApplicationContext.class
+by\Egor\Logged.class
+by\Egor\Main.class
+by\Egor\DummyManager.class
+by\Egor\DummyService.class
+by\Egor\configuration\Instance.class

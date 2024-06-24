@@ -9,12 +9,12 @@
          id="WebApp_9" version="2.4">
   <display-name>Servlet Request Info</display-name>
   <servlet>
-    <servlet-name>info</servlet-name>
-    <servlet-class>DummyHttpServlet</servlet-class>
+    <servlet-name>DummyServlet</servlet-name>
+    <servlet-class>by.Egor.DummyServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>info</servlet-name>
-    <url-pattern>/info</url-pattern>
+    <servlet-name>DummyServlet</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>

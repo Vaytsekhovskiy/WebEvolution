@@ -8,4 +8,4 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./target/WebEvol.war:/usr/local/tomcat/webapps/WebEvol.war
+      - ./target/WebEvolution.war:/usr/local/tomcat/webapps/WebEvolution.war

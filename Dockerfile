@@ -2,4 +2,4 @@
 FROM tomcat:9.0
 
 # Копируем war файл в директорию webapps в Tomcat
-COPY target/WebEvol.war /usr/local/tomcat/webapps/
+COPY target/WebEvolution.war /usr/local/tomcat/webapps/

@@ -1,5 +1,8 @@
 package by.Egor;
 
+import lombok.Getter;
+
+@Getter
 public class DummyManager {
     private final DummyService dummyService;
 
