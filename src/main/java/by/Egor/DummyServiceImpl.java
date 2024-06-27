@@ -1,25 +1,33 @@
 package by.Egor;
 
-import java.util.ArrayList;
+import by.egor.inmemorybroker.DummyMessageQueue;
+import by.egor.inmemorybroker.Phrase;
+import by.egor.inmemorybroker.PhraseRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+@Service
+@RequiredArgsConstructor
 public class DummyServiceImpl implements DummyService {
-    static final List<String> phrases = new ArrayList<>();
 
-    {
-        phrases.add("Ты всё сможешь!");
-    }
-
-    private static int INDEX = 0;
+    private final PhraseRepository phraseRepository;
 
 
     @Override
-    public List<String> getPhrases() {
-        return phrases;
+    public List<Phrase> getPhrases() {
+        return phraseRepository.getPhrases();
     }
 
     @Override
-    public String getPhrase() {
-        return phrases.get(INDEX++ % phrases.size());
+    public Phrase getPhrase() {
+        return phraseRepository.getPhrase();
+    }
+
+    @Override
+    public Phrase addPhrase(Phrase phrase) {
+        DummyMessageQueue.publish(phrase);
+        return phrase;
     }
 }

@@ -1,9 +1,13 @@
 package by.Egor;
 
+import by.egor.inmemorybroker.Phrase;
+
 import java.util.List;
 
 public interface DummyService {
-    List<String> getPhrases();
+    List<Phrase> getPhrases();
 
-    String getPhrase();
+    Phrase getPhrase();
+
+    Phrase addPhrase(Phrase phrase);
 }
